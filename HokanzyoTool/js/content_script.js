@@ -18,7 +18,7 @@ $(function() {
             ccfoliaJson = window.NechronicaParser.parse(rawText);
         }
         // CoC6版
-        if (rawText.includes("SAN：")) {
+        else if (rawText.includes("SAN：")) {
             console.log("システム判定：クトゥルフ神話TRPG 6版");
             ccfoliaJson = window.COC6Parser.parse(rawText);
         }
