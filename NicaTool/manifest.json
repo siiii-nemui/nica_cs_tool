@@ -2,5 +2,21 @@
     "name":"ネクロニカ駒出力ツール",
     "description":"キャラクター保管所で作成されたネクロニカのCSから、ココフォリアの駒を出力するためのツールです。",
     "version":"1.0.0",
-    "manifest_version":3
+    "manifest_version":3,
+
+    "content_scripts":[
+        {
+            "matches":["*://charasheet.vampire-blood.net/output.txt**"],
+            "css":[
+                "css/content_script.css"
+            ],
+            "js":[
+                "js/jquery-3.7.1.min.js",
+                "js/nechronica_parser.js",
+                "js/content_script.js"
+            ],
+            "run_at":"document_end",
+            "all_frames":false
+        }
+    ]
 }
