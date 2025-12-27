@@ -17,7 +17,11 @@ $(function() {
             console.log("システム判定：永い後日談のネクロニカ");
             ccfoliaJson = window.NechronicaParser.parse(rawText);
         }
-        // TODO: CoC作りたいね～
+        // CoC6版
+        if (rawText.includes("SAN：")) {
+            console.log("システム判定：クトゥルフ神話TRPG 6版");
+            ccfoliaJson = window.COC6Parser.parse(rawText);
+        }
         else {
             alert("対応していないシステムです");
             return;

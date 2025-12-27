@@ -6,11 +6,11 @@ window.NechronicaParser = {
         };
 
         // 名前
-        const charaName = extract(/キャラクター名：(.*)/, "名前なし");
+        const charaName = extract(/キャラクター名：(.*)/, "");
 
         //行動値
         const actionPoint = extract(/行動値：(\d+)/, "0");
-        
+
         // 回復上限
         const kakeraHeader = /\[記憶のカケラ\][\s　]*内容/;
         const mirenHeader = /\[未練\]/;

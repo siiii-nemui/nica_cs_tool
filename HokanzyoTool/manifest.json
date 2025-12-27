@@ -1,7 +1,7 @@
 {
-    "name":"ネクロニカ駒出力ツール",
-    "description":"キャラクター保管所で作成されたネクロニカのCSから、ココフォリアの駒を出力するためのツールです。",
-    "version":"1.0.0",
+    "name":"保管所駒出力ツール",
+    "description":"キャラクター保管所で作成されたCSから、ココフォリアの駒を出力するためのツールです。",
+    "version":"2.0.0",
     "manifest_version":3,
 
     "content_scripts":[
@@ -12,6 +12,7 @@
             ],
             "js":[
                 "js/jquery-3.7.1.min.js",
+                "js/coc6_parser.js",
                 "js/nechronica_parser.js",
                 "js/content_script.js"
             ],
